@@ -7,16 +7,36 @@
     <title>My Task Tracker</title>
 </head>
 
+
 <body>
     <h1>My Task Tracker</h1>
     <p>Organize your tasks. Track your progress.</p>
     <input type="text" id="taskInput" placeholder="Enter a task">
-    <button>Add Task</button>
+    <button id="addTaskBtn">Add Task</button>
     <h2>My Tasks</h2>
     <ul id="taskList">
         <li>Learn Git and GitHub</li>
         <li>Complete my first Pull Request</li>
     </ul>
+    <script>
+    const taskInput = document.getElementById("taskInput");
+    const addTaskBtn = document.getElementById("addTaskBtn");
+    const taskList = document.getElementById("taskList");
+
+    addTaskBtn.addEventListener("click", function () {
+        const task = taskInput.value.trim();
+
+        if (task === "") {
+            alert("Please enter a task!");
+            return;
+        }
+
+        const li = document.createElement("li");
+        li.textContent = task;
+        taskList.appendChild(li);
+        taskInput.value = "";
+    });
+</script>
 </body>
 
 </html>
