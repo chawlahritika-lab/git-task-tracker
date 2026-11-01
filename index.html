@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
+    <div class="container">
     <h1>My Task Tracker</h1>
     <p>Organize your tasks. Track your progress.</p>
     <input type="text" id="taskInput" placeholder="Enter a task">
@@ -18,6 +20,7 @@
         <li>Learn Git and GitHub</li>
         <li>Complete my first Pull Request</li>
     </ul>
+    </div>
     <script>
         const taskInput = document.getElementById("taskInput");
         const addTaskBtn = document.getElementById("addTaskBtn");
